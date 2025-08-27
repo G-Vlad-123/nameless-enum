@@ -21,4 +21,4 @@ Choices can be also tought of as any of these:
 - The type version of [`dyn Trait`](https://quinedot.github.io/rust-learning/dyn-trait.html) without a v-table.
 - The type version of [`enum-dispatch`](https://docs.rs/enum_dispatch/latest/enum_dispatch/index.html).
 
-For more detail check the documentation [`here`](target/doc/nameless_enum/index.html)!
+For more detail check the documentation [`here`](https://docs.rs/nameless_enum/latest/nameless_enum/index.html)!

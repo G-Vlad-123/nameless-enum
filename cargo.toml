@@ -2,6 +2,17 @@
 name = "nameless-enum"
 version = "0.1.1"
 
+authors = "G. Vlad"
+repository = "https://github.com/G-Vlad-123/nameless-enum/"
+license-file = "LICENSE"
+
+description = "A crate providing anonymous enums."
+documentation = "https://docs.rs/nameless_enum/latest/nameless_enum/index.html"
+readme = "README.md"
+
+keywords = ["anonymous", "enum", "choices"]
+# categories = /* None included as of now */
+
 [dependencies.nameless-enum-macros]
 path = "nameless-enum-macros"
 version = "*"
@@ -12,7 +23,7 @@ version = "1.0"
 optional = true
 
 [features]
-default = ["std", "macros"]
+default = ["macros"]
 
 # stable
 std = ["alloc"]

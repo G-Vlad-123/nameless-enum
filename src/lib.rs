@@ -38,7 +38,7 @@ extern crate nameless_enum_macros as macros;
 
 #[doc(inline)]
 #[cfg(feature = "macros")]
-pub use macros::feature_choice;
+pub use macros::feature_choices;
 
 mod never;
 use never::Never;
@@ -85,7 +85,7 @@ and it's simpyl a helper for when using
 the `#[exhsaustive]` attribute.
 
 It's conversions from and into `Choice`
-being automaticly added by the `#[feature_choice]` macro. 
+being automaticly added by the [`#[feature_choices]`](feature_choices) macro. 
 */
 #[cfg_attr(false, derive(Clone, Copy))]
 #[allow(private_interfaces)]
