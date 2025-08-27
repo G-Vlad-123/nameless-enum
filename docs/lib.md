@@ -1,3 +1,4 @@
+A library for the anonymous enum (maybe future rfc 🤞) proposal.
 
 # A Quick Overview
 This crate provides an anonymous enum
@@ -21,4 +22,4 @@ Choices can be also tought of as any of these:
 - The type version of [`dyn Trait`](https://quinedot.github.io/rust-learning/dyn-trait.html) without a v-table.
 - The type version of [`enum-dispatch`](https://docs.rs/enum_dispatch/latest/enum_dispatch/index.html).
 
-For more detail check the documentation [here](file:///target/doc/nameless_enum/index.html)!
+(more docs will come in the future)

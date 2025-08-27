@@ -1,4 +1,6 @@
 
+#![doc = include_str!("../docs/lib.md")]
+
 #![no_std]
 
 // #![cfg_attr(feature = "specialization", feature(specialization))]
@@ -31,6 +33,13 @@ extern crate alloc;
 #[cfg(feature = "serde")]
 extern crate serde;
 
+#[cfg(feature = "macros")]
+extern crate nameless_enum_macros as macros;
+
+#[doc(inline)]
+#[cfg(feature = "macros")]
+pub use macros::feature_choice;
+
 mod never;
 use never::Never;
 #[cfg(feature = "nightly_internals")]
@@ -39,6 +48,7 @@ use never::NotNever;
 #[non_exhaustive]
 #[derive(Clone, Copy)]
 #[allow(private_interfaces)]
+#[doc = include_str!("../docs/Choice.md")]
 pub enum Choice<
     A = Never,
     B = Never,
@@ -67,7 +77,17 @@ pub enum Choice<
     L(L),
 }
 
-#[derive(Clone, Copy)]
+/**
+The exhsaustive version of [`Choice`]
+
+This enum is not ment to be used directly,
+and it's simpyl a helper for when using
+the `#[exhsaustive]` attribute.
+
+It's conversions from and into `Choice`
+being automaticly added by the `#[feature_choice]` macro. 
+*/
+#[cfg_attr(false, derive(Clone, Copy))]
 #[allow(private_interfaces)]
 pub enum ExhaustiveChoice<
     A = Never,

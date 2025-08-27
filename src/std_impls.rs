@@ -15,6 +15,7 @@ mod convert {
     }
 
     impl<A, B, C, D, E, F, G, H, I, J, K, L> From<En<A, B, C, D, E, F, G, H, I, J, K, L>> for ExEn<A, B, C, D, E, F, G, H, I, J, K, L> {
+        #[inline]
         fn from(en: En<A, B, C, D, E, F, G, H, I, J, K, L>) -> Self {
             match en {
                 En::A(value) => ExEn::A(value),
@@ -34,6 +35,7 @@ mod convert {
     }
 
     impl<A, B, C, D, E, F, G, H, I, J, K, L> From<ExEn<A, B, C, D, E, F, G, H, I, J, K, L>> for En<A, B, C, D, E, F, G, H, I, J, K, L> {
+        #[inline]
         fn from(ex_en: ExEn<A, B, C, D, E, F, G, H, I, J, K, L>) -> Self {
             match ex_en {
                 ExEn::A(value) => En::A(value),

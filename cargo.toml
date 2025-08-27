@@ -1,19 +1,26 @@
 [package]
 name = "nameless-enum"
-version = "0.1.0"
+version = "0.1.1"
+
+[dependencies.nameless-enum-macros]
+path = "nameless-enum-macros"
+version = "*"
+optional = true
 
 [dependencies.serde]
 version = "1.0"
 optional = true
 
 [features]
-default = ["std"]
+default = ["std", "macros"]
 
 # stable
 std = ["alloc"]
 alloc = []
 
 async = []
+
+macros = ["dep:nameless-enum-macros"]
 
 serde = ["dep:serde"]
 
